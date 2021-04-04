@@ -1,0 +1,87 @@
+.d-header {
+  // Hide menu items that are marked to be removed when the topic heading
+  // replaces the banner (and thus more horizontal real estate is needed).
+  &.hide-menus .menu-item:not(.keep) { display: none; }
+  // Truly v-center header links
+  .header-buttons { margin: 0; }
+}
+
+.header-menu {
+  display: flex;
+  margin: 0;
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu-item {
+    > a {
+      color: var(--primary);
+      padding: 9px 14px;
+      vertical-align: middle;
+      font-size: $font-up-1;
+      svg {
+        padding-right: 8px;
+        vertical-align: middle;
+      }
+    }
+
+    &:hover > a, .submenu-item a:hover {
+      background-color: var(--highlight);
+      color: var(--secondary) !important;
+    }
+
+    &.has-submenu {
+      position: relative;
+    }
+
+    .header-submenu {
+      background-color: var(--secondary);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      border-bottom: 1px solid var(--header_background);
+      border-left: 4px solid var(--highlight);
+      border-right: 1px solid var(--header_background);
+      display: none;
+      padding: 1px 0 0;
+      position: absolute;
+      top: 32px;
+
+      .divider {
+        border-top: 1px solid var(--primary-low);
+        margin: 4px 0;
+      }
+
+      .submenu-item a {
+        color: var(--primary);
+        width: auto;
+        padding: 9px 13px;
+        display: block;
+        white-space: nowrap;
+        padding: 0.5em 0.7em;
+        padding-right: 2.75em;
+        svg { padding-right: 10px; }
+      }
+    }
+
+    &.has-submenu:hover .header-submenu,
+    .header-submenu:hover {
+      display: block;
+    }
+  }
+}
+
+.desktop-view .vmo,
+.mobile-view .vdo {
+  display: none !important;
+}
+
+@if $links_position == left {
+  .header-menu {
+    margin-left: 1em;
+  }
+  .hide-menus .header-submenu {
+    display: none;
+  }
+}

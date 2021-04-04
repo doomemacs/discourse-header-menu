@@ -1,0 +1,8 @@
+
+{
+  "author": "Discourse Header Menu",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-discourse": "latest"
+  }
+}

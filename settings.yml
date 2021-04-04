@@ -1,0 +1,38 @@
+menu_items:
+  type: list
+  list_type: simple
+  default: "Link with Icon, fab-icon, a link with an icon, https://meta.discourse.org, vdo, blank, remove|Most Liked,, Posts with the most amount of likes, /latest/?order=op_likes, vdo, self, keep|Dropdown,, A link with a dropdown menu, /privacy, vdm, self, keep"
+  description:
+    en: "Comma delimited in this order: link text, icon, link title, URL, view, target, hide on scroll<br><b>Link text:</b> The text for the link<br><b>Icon:</b> Fontawesome icon to use (or leave blank for no icon)<br><b>Link title:</b> the text that shows when the link is hovered<br><b>URL:</b> The path for the link (can be relative)<br><b>View:</b> vdm = desktop and mobile, vdo = desktop only, vmo = mobile only<br><b>Target:</b> blank = opens in a new tab, self = opens in the same tab<br><b>Hide on scroll:</b> remove = hides the link when the title is expanded on topic pages keep = keeps the link visible even when the title is visible on topic pages"
+
+submenu_items:
+  type: list
+  list_type: simple
+  default: "Dropdown, Sub link 1,, first link in the dropdown menu, https://meta.discourse.org, blank|Dropdown, Sub link 2,, second link in the dropdown menu, /latest/?order=op_likes, self|Dropdown, Sub link 3,, third link in the dropdown menu, /privacy, self"
+  description:
+    en: "Comma delimited in this order: parent link, link text, icon, link title, URL, target<br><b>Parent Link:</b> the name of the header link to use as this submenu's parent<br><b>Link text:</b> The text for the link<br><b>Icon:</b> Fontawesome icon to use (or leave blank for no icon)<br><b>Link title:</b> the text that shows when the link is hovered<br><b>URL:</b> The path for the link (can be relative)<br><b>Target:</b> blank = opens in a new tab, self = opens in the same tab"
+
+header_links_position:
+  default: right
+  type: enum
+  choices:
+    - right
+    - left
+  description:
+    en: "Note that when links are displayed on the left, they're automatically hidden while scrolling within topics to make room for the title"
+
+svg_icons:
+  type: "list"
+  list_type: "compact"
+  default: "caret-right"
+  description:
+    en: "Include FontAwesome icon classes for each icon used in the lists above."
+
+links_position:
+  default: right
+  type: enum
+  choices:
+    - right
+    - left
+  description:
+    en: "Note that when links are displayed on the left, they're automatically hidden while scrolling within topics to make room for the title"

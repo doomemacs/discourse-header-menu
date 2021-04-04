@@ -1,0 +1,7 @@
+{
+	"name": "Discourse header menu",
+	"license_url": "https://github.com/doomemacs/discourse-header-menu/blob/main/LICENSE",
+	"about_url": "https://github.com/doomemacs/discourse-header-menu",
+	"authors": null,
+	"component": true
+}
